@@ -70,6 +70,7 @@ the items under New and Fixed.
 - **The Layout window lists every item under the bars,** with a filter and multi-select. Selecting in the list selects in the bars, and a right click or Return opens the item's menu. Uncheck an item to hide it, or check it to show it; items macOS keeps in place can't be unchecked.
 - **The Layout window edits the selected item beside the list:** its name, icon, section, group, shortcut and whether it shows when its icon changes, plus its app. Groups, Spacers and Apple's items are a click away above it.
 - **A section with more items than fit scrolls to whatever you select,** from the bars, the keyboard or the Layout window's list.
+- **In the Layout window, a long section wraps onto more rows** instead of scrolling sideways. The bars grow to fit, up to about half the window, and scroll past that.
 - **The experimental reorder editor is gone,** with its hidden setting.
 - **Hold Option on Capture Hidden Items to retake every picture.** The button reads Retake All Pictures while you do.
 - **Extras is now Modules.**
