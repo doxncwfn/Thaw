@@ -74,7 +74,7 @@ final class LayoutSelectionModel {
 
     /// Whether a click of kind that took the selection from oldCount to newCount items made a multi-selection.
     /// A plain click on a group selects several items too, but it is not the user selecting several.
-    nonisolated static func isMultiSelection(_ kind: LayoutSelection.Click, from oldCount: Int, to newCount: Int) -> Bool {
+    static nonisolated func isMultiSelection(_ kind: LayoutSelection.Click, from oldCount: Int, to newCount: Int) -> Bool {
         kind != .replace && oldCount < 2 && newCount >= 2
     }
 
@@ -85,6 +85,16 @@ final class LayoutSelectionModel {
     /// Selects every item the bars show.
     func selectAll() {
         change { $0.selectAll(in: units) }
+    }
+
+    /// Selects the items the bars show among itemIDs, such as a group's members.
+    func select(_ itemIDs: [String]) {
+        change { $0.select(Set(itemIDs), in: units) }
+    }
+
+    /// The sections holding a selected item.
+    var sections: Set<MenuBarSectionName> {
+        selection.sections
     }
 
     /// The units a section's bar last reported, left to right.
@@ -147,14 +157,14 @@ final class LayoutSelectionModel {
         }
     }
 
-    nonisolated static func announcement(count: Int) -> String {
+    static nonisolated func announcement(count: Int) -> String {
         count == 0
             ? String(localized: "Selection cleared", comment: "VoiceOver announcement when the Layout pane's selection is cleared")
             : String(localized: "\(count) items selected", comment: "VoiceOver announcement of how many items are selected in the Layout pane")
     }
 
     /// What the pane says when a move of the selection was refused. Nil for a move that went through.
-    nonisolated static func refusal(
+    static nonisolated func refusal(
         for outcome: LayoutBatchMoveOutcome,
         section: MenuBarSectionName,
         itemName: (String) -> String?

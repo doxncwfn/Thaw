@@ -69,6 +69,8 @@ the items under New and Fixed.
 - **Pop Out Editor opens Layout in a window that stays on its menu bar.** Switch Space or display and the bars go read-only, naming where you are, until you switch back or edit that bar instead. It has Capture Hidden Items and Undo in its toolbar.
 - **The Layout window lists every item under the bars,** with a filter and multi-select. Selecting in the list selects in the bars, and a right click or Return opens the item's menu. Uncheck an item to hide it, or check it to show it; items macOS keeps in place can't be unchecked.
 - **The Layout window edits the selected item beside the list:** its name, icon, section, group, shortcut and whether it shows when its icon changes, plus its app. Groups, Spacers and Apple's items are a click away above it.
+- **Group several selected items at once.** Right-click a selection, or use the editor beside the list, to group them, add them to a group, show them as a folder, or have them show when their icons change.
+- **The Layout window's Groups tab finds a group's items.** Select a group to select its items in the list and the bars, or drop items on a group to add them.
 - **The experimental reorder editor is gone,** with its hidden setting.
 - **Hold Option on Capture Hidden Items to retake every picture.** The button reads Retake All Pictures while you do.
 - **Extras is now Modules.**

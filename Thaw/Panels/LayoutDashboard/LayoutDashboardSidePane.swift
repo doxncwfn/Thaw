@@ -56,7 +56,8 @@ struct LayoutDashboardSidePane: View {
                         canArrangeLayout: !appState.menuBarManager.isMenuBarHiddenBySystemUserDefaults,
                         isHidingUnavailable: false,
                         includesOptions: false,
-                        fixedTab: tab
+                        fixedTab: tab,
+                        groupNavigation: LayoutGroupNavigation(selection: selection, appState: appState)
                     )
                 }
             } else {
